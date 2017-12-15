@@ -3,14 +3,14 @@
 // here this function sets up the name (to match the id of the map div element in the HTML), the center with coordinates(latitude, longitude), and the zoom level(larger level, more zoom-in) for the map.
 var map = L.map('map', {
   center: [-23.817, -55.731],
-  zoom: 6.5
+  zoom: 6
 });
 
 // here we set up the basemap style
 // we can also set it as var Style = 'dark';
 // other styles are also available to choose from
 // here maybe: http://leaflet-extras.github.io/leaflet-providers/preview/
-var Style = 'light';
+var Style = 'dark';
 
 // this code constructs the map object
 L.tileLayer('http://{s}.basemaps.cartocdn.com/'+ Style + '_all/{z}/{x}/{y}@2x.png', {
@@ -28,7 +28,7 @@ L.marker([-25.262, -57.581]).addTo(map)
 
 ///3. Adding the layer data to be mapped
 // calling the data to be mapped, that is in this case, stored within the Github repo data folder
-var Paraguay_Department = "https://raw.githubusercontent.com/GeoAdaptive/Resources_library/master/Example_Paraguay/data/ADM_PRY_DEP.geojson?token=AgSQK2E68ldQRZyJTVEkUhY-YQb960hYks5aNCaMwA%3D%3D";
+var Paraguay_Department = "https://raw.githubusercontent.com/barry-fradkin/test_1/master/data/south_america.geojson";
 
 //use this function to download and create mappable objects
 $(document).ready(function(){
